@@ -3,6 +3,7 @@ import './App.css';
 import logo from './assets/logo.png';
 import Characters from './views/Characters';
 import Home from './views/Home';
+import RandomCharacter from './views/RandomCharacter';
 function App() {
   return (
     <Router>
@@ -15,7 +16,7 @@ function App() {
       <div className="navbar">
       <Link to ='/'>Home</Link>
       <Link to ='/characters'>Characters</Link>
-      <Link to ='/about'>About</Link>
+      <Link to ='/random-character'>Random Character</Link>
       </div>
       
       </div>
@@ -25,6 +26,7 @@ function App() {
         <Route path = "/"/>
         <Route index element={<Home/>} />
         <Route path = "/characters" element={<Characters/>}/>
+        <Route path = "/random-character" element={<RandomCharacter/>}/>
      </Routes>
     </div>
     

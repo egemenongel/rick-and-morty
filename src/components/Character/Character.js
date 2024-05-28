@@ -6,7 +6,9 @@ const Character = (props) => {
   
   return ( 
     <div className="character">
-      <CircularImage src={character.image} alt="Character Image" />
+      <div className="avatar">
+        <CircularImage src={character.image} alt="Character Image" />
+      </div>
       <div className="character-details">
         <h2>{character.name}</h2>
         <h2>{character.species}</h2>
