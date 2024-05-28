@@ -15,17 +15,25 @@
 }
 
 .header{
-  padding: 20px;
+  padding-top: 40px;
   display: flex;
   align-items: center;
   max-width:50 vw;
   margin: 0 auto;
-  border-bottom: 1px solid #f2f2f2;
 }
-.navbar{
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #01afc4;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure the navbar is above other elements */
+}
+
+.navbar a {
+  color: white;
 }
 .navbar a{
   padding: 10px;
