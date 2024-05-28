@@ -1,0 +1,9 @@
+.circular-image-container {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.circular-image {
+  border-radius: 50%;
+  object-fit: cover;
+}

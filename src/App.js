@@ -1,6 +1,7 @@
 import { Link, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
 import logo from './assets/logo.png';
+import Characters from './views/Characters';
 import Home from './views/Home';
 function App() {
   return (
@@ -21,8 +22,9 @@ function App() {
 
     <div className="App">
       <Routes>
-        <Route path = "/"></Route>
+        <Route path = "/"/>
         <Route index element={<Home/>} />
+        <Route path = "/characters" element={<Characters/>}/>
      </Routes>
     </div>
     
