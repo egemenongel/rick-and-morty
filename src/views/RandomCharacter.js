@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
+import ClipLoader from "react-spinners/ClipLoader";
 import Character from "../components/Character/Character";
 import useFetch from "../hooks/useFetch";
+
+
 const RandomCharacter = () => {
   const [randomNumber, setRandomNumber] = useState(generateRandomNumber());
 
@@ -16,7 +19,14 @@ const RandomCharacter = () => {
 
   return (
   <div className="random">
-      {isLoading && <div>"loading"...</div>}
+      <ClipLoader
+        color={"#01afc4"}
+       loading={isLoading}
+        // cssOverride={override}
+        size={150}
+        aria-label="Loading Spinner"
+        data-testid="loader"
+      />
       {error && <div>{error}</div>}
       {character && <Character character = {character}/>}
   </div>);

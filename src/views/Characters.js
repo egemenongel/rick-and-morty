@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
+import ClipLoader from "react-spinners/ClipLoader";
 import Character from "../components/Character/Character";
 
 const Characters = () => {
@@ -53,7 +54,14 @@ const Characters = () => {
       {characters.map((character, index) => (
         <Character character={character} key={`${character.id}-${index}`} />
       ))}
-      {isLoading && <p>Loading...</p>}
+      <ClipLoader
+        color={"#01afc4"}
+       loading={isLoading}
+        // cssOverride={override}
+        size={150}
+        aria-label="Loading Spinner"
+        data-testid="loader"
+      />
       {!isLoading && !hasMore && <p>No more items</p>}
       {error && <p>Error loading items</p>}
   </div>

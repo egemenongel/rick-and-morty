@@ -14,6 +14,8 @@ const Character = (props) => {
         <h2>{character.species}</h2>
         <h2>{character.gender}</h2>
         <h2>{character.status}</h2>
+        <h2>{character.episode.length} episodes</h2>
+        <h2>Current Location: {character.location.name}</h2>
       </div>
     </div>
    );
