@@ -9,21 +9,22 @@ const Characters = () => {
   const [isLoading, setLoading] = useState(false);
   const [hasMore, setHasMore] = useState(true);
 
-  useEffect(() => {
-    loadMoreItems();
-  }, [page]);
-
-  const loadMoreItems = async () => {
+  const loadMoreItems = async (pageNum) => {
     if (isLoading || !hasMore) return;
 
     setLoading(true);
 
     try {
-      const response = await fetch(`https://rickandmortyapi.com/api/character?page=${page}`);
+      const response = await fetch(`https://rickandmortyapi.com/api/character?page=${pageNum}`);
       const data = await response.json();
 
       if (data && data.results) {
-        setCharacters((prevCharacters) => [...prevCharacters, ...data.results]);
+        setCharacters((prevCharacters) => {
+          const newCharacters = data.results.filter(
+            (newChar) => !prevCharacters.some((char) => char.id === newChar.id)
+          );
+          return [...prevCharacters, ...newCharacters];
+        });
         setHasMore(data.info.next !== null);
       } else {
         setHasMore(false);
@@ -35,6 +36,11 @@ const Characters = () => {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    loadMoreItems(page);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [page]);
 
   const handleScroll = useCallback(() => {
     if (window.innerHeight + document.documentElement.scrollTop >= document.documentElement.offsetHeight - 1) {
@@ -51,20 +57,19 @@ const Characters = () => {
 
   return (
     <div className="characters">
-      {characters.map((character, index) => (
-        <Character character={character} key={`${character.id}-${index}`} />
+      {characters.map((character) => (
+        <Character character={character} key={character.id} />
       ))}
       <ClipLoader
         color={"#01afc4"}
-       loading={isLoading}
-        // cssOverride={override}
+        loading={isLoading}
         size={150}
         aria-label="Loading Spinner"
         data-testid="loader"
       />
       {!isLoading && !hasMore && <p>No more items</p>}
       {error && <p>Error loading items</p>}
-  </div>
+    </div>
   );
 };
 

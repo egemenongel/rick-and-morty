@@ -2,8 +2,8 @@ import { Link, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
 import logo from './assets/logo.png';
 import Characters from './views/Characters';
-import Home from './views/Home';
 import RandomCharacter from './views/RandomCharacter';
+import RandomEpisode from './views/RandomEpisode';
 function App() {
   return (
     <Router>
@@ -14,19 +14,18 @@ function App() {
       </div>
 
       <div className="navbar">
-      <Link to ='/'>Home</Link>
       <Link to ='/characters'>Characters</Link>
-      <Link to ='/random-character'>Random Character</Link>
+      <Link to ='/random-character'>Random Character</Link> 
+      <Link to ='/random-episode'>Random Episode</Link>
       </div>
       
       </div>
 
     <div className="App">
       <Routes>
-        <Route path = "/"/>
-        <Route index element={<Home/>} />
         <Route path = "/characters" element={<Characters/>}/>
         <Route path = "/random-character" element={<RandomCharacter/>}/>
+        <Route path = "/random-episode" element={<RandomEpisode/>}/>
      </Routes>
     </div>
     

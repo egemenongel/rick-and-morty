@@ -1,0 +1,21 @@
+.characterList{
+  display: flex;
+  flex-direction: row;
+  float: left;
+  padding: 30px;
+}
+
+.characterItem{
+  display: flex;
+  flex-direction: column;
+  align-self: auto;
+  /* text-overflow: ellipsis;
+  text-align: justify; */
+}
+
+.characterName{
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+}
