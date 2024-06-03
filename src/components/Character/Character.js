@@ -9,7 +9,7 @@ const Character = (props) => {
       <div className="avatar">
         <CircularImage src={character.image} alt="Character Image" />
       </div>
-      <div className="character-details">
+      <div className="characterDetails">
         <h2>{character.name}</h2>
         <h2>{character.species}</h2>
         <h2>{character.gender}</h2>

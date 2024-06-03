@@ -15,7 +15,7 @@
   border-radius: 50%; 
 }
 
-.character-details {
+.characterDetails {
   padding-left: 30px;
   text-align: left;
   align-self: center;
@@ -28,7 +28,7 @@
     padding: 15px;
   }
 
-  .character-details {
+  .characterDetails {
     padding-left: 0;
     padding-top: 15px;
   }
@@ -43,13 +43,10 @@
     flex-direction: row;
   }
 
-  .character-details {
+  .characterDetails {
     padding-top: 10px;
   }
 
-  .avatar{
-
-  }
 }
 
 @media (max-width: 480px) {
@@ -59,7 +56,7 @@
     flex-direction: row;
   }
 
-  .character-details {
+  .characterDetails {
     padding-top: 5px;
     font-size: 14px; /* Adjust font size for smaller screens */
   }
