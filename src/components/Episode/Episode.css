@@ -1,6 +1,10 @@
-.episode{
+.episode {
   display: flex;
   flex-direction: column;
   align-items: start;
   padding-left: 10vw;
+}
+
+.characterList {
+  width: 100%;
 }

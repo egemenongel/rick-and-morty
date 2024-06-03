@@ -1,19 +1,17 @@
-.characterList{
-  display: flex;
-  flex-direction: row;
-  float: left;
-  padding: 30px;
+.characterList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
 }
 
-.characterItem{
+.characterItem {
   display: flex;
   flex-direction: column;
-  align-self: auto;
+  align-items: center;
 }
 
-.characterName{
-  align-self: center;
-  display: flex;
-  flex-direction: column;
+.characterName {
+  text-align: center;
   max-width: 250px;
+  margin-top: 10px;
 }
