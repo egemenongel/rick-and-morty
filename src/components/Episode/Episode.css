@@ -8,3 +8,31 @@
 .characterList {
   width: 100%;
 }
+
+.episode h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+  color: #5f315e;
+}
+
+.metadata {
+  font-size: 1.5em;
+  margin-bottom: 1.5em;
+  color: #5f315e;
+  text-align: start;
+}
+
+.metadata span {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.characters {
+  margin-bottom: 2em;
+}
+
+.characters h2 {
+  font-size: 2em;
+  margin-bottom: 1em;
+  color: #01afc4;
+}

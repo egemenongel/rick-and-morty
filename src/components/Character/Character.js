@@ -10,12 +10,12 @@ const Character = (props) => {
         <CircularImage src={character.image} alt="Character Image" />
       </div>
       <div className="characterDetails">
-        <h2>{character.name}</h2>
-        <h2>{character.species}</h2>
-        <h2>{character.gender}</h2>
-        <h2>{character.status}</h2>
-        <h2>{character.episode.length} episodes</h2>
-        <h2>Current Location: {character.location.name}</h2>
+        <h3>{character.name}</h3>
+        <h3>{character.species}</h3>
+        <h3>{character.gender}</h3>
+        <h3>{character.status}</h3>
+        <h3>{character.episode.length} episodes</h3>
+        <h3>Current Location: {character.location.name}</h3>
       </div>
     </div>
    );

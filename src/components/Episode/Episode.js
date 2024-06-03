@@ -6,10 +6,14 @@ const Episode = (props) => {
 
   return (  
     <div className="episode">
-      <h1>Name: {episode.name}</h1>
-      <h1>Episode: {episode.episode}</h1>
-      <h1>Air Date: {episode.air_date}</h1>
-      <h1>Characters:</h1>
+      <h1>{episode.name}</h1>
+      <div class="metadata">
+            <span><strong>Episode:</strong> {episode.episode}</span>
+            <span><strong>Air Date:</strong> {episode.air_date}</span>
+      </div>
+      <div className="characters">
+        <h2>Characters</h2>
+      </div>
       {characters.length > 0 && (
         <div className="characterList">
           {characters.map((character) => (
